@@ -1,0 +1,19 @@
+.navbar .container .navbar-brand img {
+    height: 50px;
+}
+
+.col-lg-9 .row {
+    margin-top: 25px;
+}
+
+a.btn.btn-primary {
+    width: 100%;
+}
+
+.wrapper {
+    padding: 0 20px;
+}
+
+.wrapper h6 {
+    color: #007bff;
+}

@@ -3,6 +3,7 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
  */
+@import "index.css";
 
 body {
   padding-top: 54px;
@@ -12,8 +13,4 @@ body {
   body {
     padding-top: 56px;
   }
-}
-
-.navbar .container .navbar-brand img {
-  height: 50px;
 }
