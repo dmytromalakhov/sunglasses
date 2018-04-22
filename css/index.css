@@ -43,7 +43,7 @@ a.btn.btn-primary {
     font-size: 26px;
     text-transform: uppercase;
 }
-.why-us-content p {
+.wrapper .content .why-us .why-us-content p {
     display: inline-block;
     color: #007bff;
 }
@@ -52,7 +52,7 @@ a.btn.btn-primary {
     font-size: 26px;
     text-transform: uppercase;
 }
-.about-us-content p {
+.wrapper .content .about-us .about-us-content p {
     display: inline-block;
     color: #007bff;
 }
@@ -61,10 +61,10 @@ a.btn.btn-primary {
     font-size: 26px;
     text-transform: uppercase;
 }
-.social .social-content{
+.wrapper .content .social .social-content{
     margin-bottom: 20px;
 }
-.social .social-content i {
+.wrapper .content .social .social-content i {
     font-size: 40px;
     color: #000;
     margin: 0 25px;
@@ -73,4 +73,5 @@ a.btn.btn-primary {
 
 
 /*-------contacts--------*/
+
 /*-------/contacts--------*/
