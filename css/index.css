@@ -2,6 +2,28 @@
     height: 50px;
 }
 
+/*-------index--------*/
+.wrapper {
+    padding: 0 20px;
+}
+
+.wrapper h1 {
+    font-size: 26px;
+}
+
+.wrapper h2 {
+    color: #007bff;
+    font-size: 14px;
+}
+
+.wrapper p {
+    font-size: 14px;
+}
+/*-------/index--------*/
+
+
+
+/*-------shop--------*/
 .col-lg-9 .row {
     margin-top: 25px;
 }
@@ -9,11 +31,12 @@
 a.btn.btn-primary {
     width: 100%;
 }
+/*-------/shop--------*/
 
-.wrapper {
-    padding: 0 20px;
-}
 
-.wrapper h6 {
-    color: #007bff;
-}
+/*-------about--------*/
+/*-------/about--------*/
+
+
+/*-------contacts--------*/
+/*-------/contacts--------*/
