@@ -35,6 +35,40 @@ a.btn.btn-primary {
 
 
 /*-------about--------*/
+.wrapper .content {
+    margin: 0 auto;
+}
+.wrapper .content .why-us h1 {
+    margin-left: 10%;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+.why-us-content p {
+    display: inline-block;
+    color: #007bff;
+}
+.wrapper .content .about-us h1 {
+    margin-left: 10%;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+.about-us-content p {
+    display: inline-block;
+    color: #007bff;
+}
+.wrapper .content .social h1 {
+    margin-left: 10%;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+.social .social-content{
+    margin-bottom: 20px;
+}
+.social .social-content i {
+    font-size: 40px;
+    color: #000;
+    margin: 0 25px;
+}
 /*-------/about--------*/
 
 
