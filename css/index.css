@@ -83,6 +83,12 @@ a.btn.btn-primary {
     }
 }
 
+@media (min-width: 992px) {
+    .wrapper .content .social .social-content i:hover {
+        color: #007bff;
+    }
+}
+
 /*-------/about--------*/
 
 
