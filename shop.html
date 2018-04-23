@@ -35,12 +35,17 @@
               <a class="nav-link" href="contacts.html">Контакты</a>
             </li>
           </ul>
+          <div data-toggle="modal" data-target=".cart-modal">
+            <a class="nav-link" href="#cartModal" data-toggle="modal">
+              <i class="fab fa-opencart fa-spin" aria-hidden="true"></i>
+              Cart<span id="cart-badge" class="badge badge-light"></span>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
 
     <!-- Page Content -->
-
     <div class="container">
 
       <div class="row">
@@ -59,108 +64,7 @@
         </div>
         <!-- /.col-lg-3 -->
         <div class="col-lg-9">
-
-          <div class="row">
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="img/ray-ban-1.jpg" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Item Three</a>
-                  </h4>
-                  <h5>24.99 грн.</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted"><a href="#" class="btn btn-primary">Добавить в корзину</a></small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="img/ray-ban-2.jpg" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Item Three</a>
-                  </h4>
-                  <h5>24.99 грн.</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted"><a href="#" class="btn btn-primary">Добавить в корзину</a></small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="img/ray-ban-3.jpg" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Item Three</a>
-                  </h4>
-                  <h5>24.99 грн.</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted"><a href="#" class="btn btn-primary">Добавить в корзину</a></small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="img/ray-ban-4.jpg" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Item Three</a>
-                  </h4>
-                  <h5>24.99 грн.</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted"><a href="#" class="btn btn-primary">Добавить в корзину</a></small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="img/ray-ban-5.jpg" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Item Three</a>
-                  </h4>
-                  <h5>24.99 грн.</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted"><a href="#" class="btn btn-primary">Добавить в корзину</a></small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="img/ray-ban-6.jpg" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Item Three</a>
-                  </h4>
-                  <h5>24.99 грн.</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted"><a href="#" class="btn btn-primary">Добавить в корзину</a></small>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <!-- /.row -->
-
+          <div class="row goods-out"></div>
         </div>
         <!-- /.col-lg-9 -->
 
@@ -170,6 +74,15 @@
     </div>
     <!-- /.container -->
 
+    <!-- Large modal -->
+    <div class="modal fade cart-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <h1>Корзина</h1>
+          <div class="mini-cart"></div>
+        </div>
+      </div>
+    </div>
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
@@ -181,6 +94,8 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="js/main.js"></script>
 
   </body>
 
