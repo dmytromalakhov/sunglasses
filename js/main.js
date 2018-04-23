@@ -49,12 +49,20 @@ function saveToCart() {
 }
 
 function showMiniCart(){
-    //Показываю мини карзину
-    let out ='';
-    for(let key in cart){
-        out += key + ' --- '  + cart[key] + '<br>';
-    }
-    $('.mini-cart').html(out);
+    $.getJSON('goods.json', function (data) {
+        let goods = data;
+        let out = '';
+        for (let id in cart) {
+            out += `<button data-id="${id}"><i class="fas fa-trash-alt"></i></button>`;
+            out += `${cart[id]}`;
+            out += ` x `;
+            out += `<img src="img/${goods[id].img}">`;
+            out += `${goods[id].name}`;
+            out += `<br>`;
+
+        }
+        $('.basket').html(out);
+    });
 }
 
 function loadCart() {
@@ -63,6 +71,8 @@ function loadCart() {
         //если есть - расшифровываю и записываю в переменную cart
         cart = JSON.parse(localStorage.getItem('cart'));
         showMiniCart();
+    } else {
+        $('.basket').html('Карзина пуста!')
     }
 }
 

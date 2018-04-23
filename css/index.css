@@ -324,3 +324,16 @@ form input[type="submit"] {
     }
 }
 /*-------/contacts--------*/
+
+/*-------modal--------*/
+.content {
+    height: 500px;
+}
+.mini-cart img {
+    width: 48px;
+}
+
+.basket img {
+    width: 70px;
+}
+/*-------/modal--------*/
