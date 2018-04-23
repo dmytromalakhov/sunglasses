@@ -7,7 +7,6 @@ function init() {
 
 function goodsOut(data) {
     //вывод на страницу
-    console.log(data);
     let out = '';
     for (let key in data) {
         out += '<div class="col-lg-4 col-md-6 mb-4">';
@@ -21,7 +20,7 @@ function goodsOut(data) {
                     out += `<p class="card-text">${data[key].description}</p>`;
                 out += '</div>';
                 out += '<div class="card-footer">';
-                    out += `<a href="#" class="btn btn-primary add-to-cart" data-id="${key}">Добавить в корзину</a>`;
+                    out += `<a class="btn btn-primary add-to-cart" data-id="${key}">Добавить в корзину</a>`;
                  out += '</div>';
             out += '</div>';
         out += '</div>';
@@ -49,20 +48,64 @@ function saveToCart() {
 }
 
 function showMiniCart(){
-    $.getJSON('goods.json', function (data) {
-        let goods = data;
-        let out = '';
-        for (let id in cart) {
-            out += `<button data-id="${id}"><i class="fas fa-trash-alt"></i></button>`;
-            out += `${cart[id]}`;
-            out += ` x `;
-            out += `<img src="img/${goods[id].img}">`;
-            out += `${goods[id].name}`;
-            out += `<br>`;
+    if (!isEmpty(cart)){
+        $('.basket').html('Карзина пуста!')
+    } else {
+        $.getJSON('goods.json', function (data) {
+            let goods = data;
+            let out = '';
+            for (let id in cart) {
+                out += `<button data-id="${id}" class="del-goods"><i class="fas fa-trash-alt"></i></button>`;
+                out += `<h5>${cart[id]}</h5>`;
+                out += `<h6><i class="fas fa-times"></i></h6>`;
+                out += `<img src="img/${goods[id]['img']}">`;
+                out += `<h6><i class="fas fa-exchange-alt"></i></h6>`;
+                out += `<h5>${cart[id] * goods[id]['cost']} грн.</h5>`;
+                out += `<h4>${goods[id]['name']}</h4>`;
+                out += `<button data-id="${id}" class="plus-goods"><i class="fas fa-plus"></i></button>`;
+                out += `<button data-id="${id}" class="minus-goods"><i class="fas fa-minus"></i></i></button>`;
+                out += `<br>`;
+                out += `<br>`;
 
-        }
-        $('.basket').html(out);
-    });
+            }
+            $('.basket').html(out);
+            $('.del-goods').on('click', delGoods);
+            $('.plus-goods').on('click', plusGoods);
+            $('.minus-goods').on('click', minusGoods);
+        });
+    }
+}
+
+function delGoods() {
+    let id = $(this).attr('data-id');
+    delete cart[id];
+    saveToCart();
+    showMiniCart();
+}
+
+function minusGoods() {
+    let id = $(this).attr('data-id');
+    if (cart[id] > 1) {
+        cart[id]--
+    } else {
+        delete cart[id];
+    }
+    saveToCart();
+    showMiniCart();
+}
+
+function plusGoods() {
+    let id = $(this).attr('data-id');
+    cart[id]++
+    saveToCart();
+    showMiniCart();
+}
+
+function isEmpty(object) {
+    //проверка корзины на пустоту
+    for (var key in object)
+        if (object.hasOwnProperty(key)) return true;
+    return false;
 }
 
 function loadCart() {

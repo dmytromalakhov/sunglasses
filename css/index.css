@@ -327,13 +327,57 @@ form input[type="submit"] {
 
 /*-------modal--------*/
 .content {
-    height: 500px;
+    min-height: 500px;
+    height: 100%;
 }
-.mini-cart img {
-    width: 48px;
+
+.content h1 {
+    text-align: center;
+    margin: 0px 0 20px 0;
+    background-color: #212529;
+    padding-bottom: 15px;
+    color: #fff;
+}
+
+.basket button.del-goods{
+    margin-left: 10px;
+}
+
+.basket button.del-goods,
+.basket button.plus-goods,
+.basket button.minus-goods {
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    margin-right: 10px;
+}
+.basket h4{
+    margin-right: 10px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.basket h5{
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+    font-size: 20px;
+    display: inline-block;
+}
+.basket h6{
+    position: relative;
+    top: 3px;
+    margin-right: 10px;
+    font-size: 20px;
+    display: inline-block;
 }
 
 .basket img {
-    width: 70px;
+    border: 3px solid #007bff;
+    box-sizing: border-box;
+    margin-right: 10px;
+    width: 150px;
 }
 /*-------/modal--------*/
