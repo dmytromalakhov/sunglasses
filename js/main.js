@@ -49,23 +49,26 @@ function saveToCart() {
 
 function showMiniCart(){
     if (!isEmpty(cart)){
-        $('.basket').html('Карзина пуста!')
+        $('.basket').html('<h3>Корзина пуста!</h3>')
     } else {
         $.getJSON('goods.json', function (data) {
             let goods = data;
             let out = '';
             for (let id in cart) {
                 out += `<button data-id="${id}" class="del-goods"><i class="fas fa-trash-alt"></i></button>`;
-                out += `<h5>${cart[id]}</h5>`;
-                out += `<h6><i class="fas fa-times"></i></h6>`;
-                out += `<img src="img/${goods[id]['img']}">`;
-                out += `<h6><i class="fas fa-exchange-alt"></i></h6>`;
-                out += `<h5>${cart[id] * goods[id]['cost']} грн.</h5>`;
                 out += `<h4>${goods[id]['name']}</h4>`;
+                out += `<img src="img/${goods[id]['img']}">`;
+                out += `<h5 class="count">${cart[id]}</h5>`;
+                out += `<h6 class="x"><i class="fas fa-times"></i></h6>`;
+                out += `<h5 class="price">${goods[id]['cost']} грн.</h5>`;
+                out += `<h6><i class="fas fa-exchange-alt"></i></h6>`;
+                out += `<h5 class="final-price">${cart[id] * goods[id]['cost']} грн.</h5>`;
                 out += `<button data-id="${id}" class="plus-goods"><i class="fas fa-plus"></i></button>`;
                 out += `<button data-id="${id}" class="minus-goods"><i class="fas fa-minus"></i></i></button>`;
                 out += `<br>`;
                 out += `<br>`;
+                out += `<hr>`;
+
 
             }
             $('.basket').html(out);
@@ -115,7 +118,7 @@ function loadCart() {
         cart = JSON.parse(localStorage.getItem('cart'));
         showMiniCart();
     } else {
-        $('.basket').html('Карзина пуста!')
+        $('.basket').html('<h3>Корзина пуста!</h3>')
     }
 }
 
