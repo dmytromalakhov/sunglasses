@@ -175,75 +175,36 @@ a.btn.btn-primary {
     }
 }
 
-form label[for="client-name"] {
-    display: none;
-}
-
-form input[id="client-name"] {
-    background-color: #212529;
-    border: none;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    border-radius: 3px;
-    height: 40px;
-    width: 280px;
-    margin: 10px 0;
-}
-
-form label[for="client-email"] {
-    display: none;
-}
-
-form input[id="client-email"] {
-    background-color: #212529;
-    border: none;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    border-radius: 3px;
-    height: 40px;
-    width: 280px;
-    margin: 10px 0;
-}
-
-form label[for="client-number"] {
-    display: none;
-}
-
-form input[id="client-number"] {
-    background-color: #212529;
-    border: none;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    border-radius: 3px;
-    height: 40px;
-    width: 280px;
-    margin: 10px 0;
-}
-
+form label[for="client-name"],
+form label[for="client-email"],
+form label[for="client-number"],
 form label[for="client-message"] {
     display: none;
 }
 
-form textarea[id="client-message"] {
+form input[id="client-name"],
+form input[id="client-email"],
+form input[id="client-number"],
+form textarea[id="client-message"],
+form input[type="submit"]{
     background-color: #212529;
+    color: #fff;
     border: none;
     padding-bottom: 5px;
     padding-left: 10px;
     border-radius: 3px;
-    height: 100px;
+    height: 40px;
     width: 280px;
     margin: 10px 0;
 }
 
+form textarea[id="client-message"] {
+    height: 100px;
+}
+
 form input[type="submit"] {
-    height: 40px;
-    width: 280px;
-    margin: 10px 0;
     background-color: #007bff;
-    border-radius: 3px;
-    border: none;
     font-size: 16px;
-    color: #fff;
     font-weight: 500;
 }
 
