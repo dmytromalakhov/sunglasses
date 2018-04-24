@@ -124,7 +124,41 @@ function loadCart() {
     }
 }
 
+function sendEmail(e){
+    e.preventDefault();
+    let cname = $('#c-name').val();
+    let cemail = $('#c-email').val();
+    let cphone = $('#c-number').val();
+
+    if (cname !== "" && cemail !== "" && cphone !== "") {
+        if (isEmpty(cart)){
+            $.post(
+                "core/mail.php", {
+                    "cname" : cname,
+                    "cemail" : cemail,
+                    "cphone" : cphone,
+                    "cart" : cart
+                },
+                function (data) {
+                    if (data == 1) {
+                        alert('Заказ отправлен');
+                    } else {
+                        alert('Повторите заказ');
+                    }
+                }
+            );
+        } else {
+            e.preventDefault();
+            alert('Корзина пуста');
+        }
+    } else {
+        e.preventDefault();
+        alert('Заполните поля!');
+    }
+}
+
 $(document).ready(function () {
     init();
     loadCart();
+    $('#send-email').on('click', sendEmail);
 });
