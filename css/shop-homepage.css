@@ -4,6 +4,10 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
  */
 @import "index.css";
+@import "shop.css";
+@import "about.css";
+@import "contacts.css";
+@import "modal.css";
 
 body {
   padding-top: 54px;

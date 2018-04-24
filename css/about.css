@@ -1,0 +1,62 @@
+.wrapper .content {
+    margin: 0 auto;
+}
+.wrapper .content .why-us h1,
+.wrapper .content .about-us h1,
+.wrapper .content .social h1 {
+    margin-left: 10%;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.wrapper .content .why-us .why-us-content p,
+.wrapper .content .about-us .about-us-content p {
+    font-size: 14px;
+    display: inline-block;
+    color: #007bff;
+    width: 260px;
+}
+
+.wrapper .content .why-us .why-us-content i,
+.wrapper .content .about-us .about-us-content i {
+    vertical-align: top;
+    margin-top: 5px;
+}
+
+.wrapper .content .social .social-content{
+    margin-bottom: 20px;
+}
+.wrapper .content .social .social-content i {
+    font-size: 40px;
+    color: #000;
+}
+.wrapper .content .social .social-content i:active {
+    color: #007bff;
+}
+.wrapper .content .social .social-content a:nth-child(2) i {
+    margin: 0 78px;
+}
+
+@media (min-width: 375px) {
+    .wrapper .content .why-us h1,
+    .wrapper .content .about-us h1,
+    .wrapper .content .social h1 {
+        font-size: 20px;
+    }
+    .wrapper .content .social .social-content a:nth-child(2) i {
+        margin: 0 105px;
+    }
+}
+
+@media (min-width: 425px) {
+    .wrapper .content .why-us h1,
+    .wrapper .content .about-us h1,
+    .wrapper .content .social h1 {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper .content .social .social-content i:hover {
+        color: #007bff;
+    }
+}
