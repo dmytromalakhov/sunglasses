@@ -17,6 +17,7 @@ function init(){
     $sql = "SELECT id, name FROM goods";
     $result = $conn->query($sql);
 
+
     if ($result->num_rows > 0) {
         $out = array();
         while($row = $result->fetch_assoc()) {

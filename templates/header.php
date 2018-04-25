@@ -28,20 +28,75 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarResponsive">
                   <ul class="navbar-nav ml-auto">
-                      <li class="nav-item active">
-                          <a class="nav-link" href="/">Главная
-                              <span class="sr-only">(current)</span>
-                          </a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="shop">Магазин</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="about">О нас</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="contacts">Контакты</a>
-                      </li>
+                      <?php
+                      switch ($route) {
+                          case "":
+                              echo "
+                              <li class=\"nav-item active\">
+                                <a class=\"nav-link\" href=\"/\">Главная</a>
+                              </li>
+                              <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"shop\">Магазин</a>
+                              </li>
+                              <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"about\">О нас</a>
+                              </li>
+                              <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"contacts\">Контакты</a>
+                              </li>
+                              ";
+                              break;
+                          case "shop":
+                              echo "
+                              <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"/\">Главная</a>
+                              </li>
+                              <li class=\"nav-item active\">
+                                <a class=\"nav-link\" href=\"shop\">Магазин</a>
+                              </li>
+                              <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"about\">О нас</a>
+                              </li>
+                              </li>
+                              <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"contacts\">Контакты</a>
+                              </li>
+                              ";
+                              break;
+                          case "about":
+                              echo "
+                              <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"/\">Главная</a>
+                              </li>
+                              <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"shop\">Магазин</a>
+                              </li>
+                              <li class=\"nav-item active\">
+                                <a class=\"nav-link\" href=\"about\">О нас</a>
+                              </li>
+                              <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"contacts\">Контакты</a>
+                              </li>
+                              ";
+                              break;
+                          case "contacts":
+                              echo "
+                              <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"/\">Главная</a>
+                              </li>
+                              <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"shop\">Магазин</a>
+                              </li>
+                              <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"about\">О нас</a>
+                              </li>
+                              <li class=\"nav-item active\">
+                                <a class=\"nav-link\" href=\"contacts\">Контакты</a>
+                              </li>
+                              ";
+                              break;
+                      }
+                      ?>
                   </ul>
                   <div data-toggle="modal" data-target=".cart-modal">
                       <a class="nav-link" href="#cartModal" data-toggle="modal">
