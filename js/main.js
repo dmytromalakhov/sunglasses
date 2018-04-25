@@ -161,4 +161,5 @@ $(document).ready(function () {
     init();
     loadCart();
     $('#send-email').on('click', sendEmail);
+
 });

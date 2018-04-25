@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "sun-glasses-shop";
+$servername = "localhost"; //"localhost"
+$username = "root"; //"root"
+$password = ""; //""
+$dbname = "sun-glasses-shop"; //"sun-glasses-shop"
 
 function connect() {
     $conn = new mysqli('localhost', "root", "", "sun-glasses-shop");
