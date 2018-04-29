@@ -14,9 +14,10 @@ function goodsOut(data) {
                 out += `<a href=""><img class="card-img-top" src="img/${data[key].img}" alt="${data[key].name}"></a>`;
                 out += '<div class="card-body">';
                     out += '<h4 class="card-title">';
-                        out += `<a href="#">${data[key].name}</a>`;
+                        out += `<a href="">${data[key].name}</a>`;
                     out += '</h4>';
                     out += `<h5>${data[key].cost} грн.</h5>`;
+                    out += `<a href=""><p class="${data[key].ord}">${data[key].ord}</p></a>`
                     out += `<p class="card-text">${data[key].description}</p>`;
                 out += '</div>';
                 out += '<div class="card-footer">';

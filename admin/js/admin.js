@@ -10,8 +10,7 @@ function init(){
 
 function showGoods(data){
     data = JSON.parse(data);
-    console.log(data);
-    let out = '<select>';
+    let out = '<select size="5">';
     out += '<option data-id="0">Новый товар</option>'
     for(let id in data){
         out += `<option data-id="${id}">${data[id]['name']}</option>`
@@ -23,7 +22,6 @@ function showGoods(data){
 
 function selectGoods() {
     let id = $('.goods-out select option:selected').attr('data-id');
-    console.log(id);
     $.post(
         "core.php",
         {
@@ -58,10 +56,10 @@ function saveToDb() {
             },
             function (data) {
                 if(data == 1) {
-                    alert('Запись добавлена!')
+                    alertGood()
                     init();
                 }else {
-                    console.log(data);
+                    alertBad();
                 }
             }
         );
@@ -79,15 +77,33 @@ function saveToDb() {
             },
             function (data) {
                 if(data == 1) {
-                    alert('Запись добавлена!')
+                    alertGood();
                     init();
                 }else {
-                    console.log(data);
+                    alertBad();
                 }
             }
         );
     }
 }
+
+function alertGood() {
+    //вывод на страницу
+    $('.alert-info').show();
+    setTimeout(function alertStopGood(){
+        $('.alert-info').hide();
+    }, 1000);
+}
+
+function alertBad() {
+    //вывод на страницу
+    $('.alert-danger').show();
+    setTimeout(function alertStopBad(){
+        $('.alert-danger').hide();
+    }, 1000);
+}
+
+
 
 $(document).ready(function () {
     init();
