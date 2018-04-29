@@ -88,7 +88,6 @@ function saveToDb() {
 }
 
 function alertGood() {
-    //вывод на страницу
     $('.alert-info').show();
     setTimeout(function alertStopGood(){
         $('.alert-info').hide();
@@ -96,7 +95,6 @@ function alertGood() {
 }
 
 function alertBad() {
-    //вывод на страницу
     $('.alert-danger').show();
     setTimeout(function alertStopBad(){
         $('.alert-danger').hide();

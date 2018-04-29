@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost"; //"localhost"
-$username = "id5516999_root"; //"root"
+$servername = "mysql.hostinger.co.uk"; //"localhost"
+$username = "u311993610_root"; //"root"
 $password = "Lbvf1993"; //""
-$dbname = "id5516999_sunglasses"; //"sun-glasses-shop"
+$dbname = "u311993610_sungl"; //"sun-glasses-shop"
 
 function connect() {
     $conn = new mysqli('localhost', "root", "", "sun-glasses-shop");
@@ -101,5 +101,4 @@ function writeJSON(){
         echo "0";
     }
     $conn->close();
-
 }
