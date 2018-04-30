@@ -1,0 +1,61 @@
+body .container .fixed {
+    position: fixed;
+}
+
+body .container .nav {
+    background-color: greenyellow;
+}
+
+body .container .fixed .nav.justify-content-center{
+    width: 690px;
+    height: 50px;
+}
+
+body .alert {
+    display: none;
+}
+
+body .header{
+    height: 50px;
+}
+
+body .index {
+    background-color: green;
+    height: 100vh;
+}
+
+body .shop {
+    background-color: #cccccc;
+    display: grid;
+    grid-template: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr 0.1fr / repeat(3, 1fr);
+}
+
+body .shop .goods-out{
+    grid-column: 1 / -1;
+}
+
+body .shop label[for="gname"],
+body .shop label[for="gcost"],
+body .shop label[for="gdescr"],
+body .shop label[for="gorder"],
+body .shop label[for="gimg"]{
+    grid-column: 1 / 2;
+}
+
+body .shop #gname,
+body .shop #gcost,
+body .shop #gdescr,
+body .shop #gorder,
+body .shop #gimg{
+    grid-column: 2 / 4;
+}
+
+body .about {
+    background-color: indianred;
+    height: 100vh;
+}
+
+body .contacts {
+    background-color: cadetblue;
+    height: 100vh;
+}

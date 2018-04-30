@@ -9,6 +9,7 @@ function init(){
 }
 
 function showGoods(data){
+    console.log(data);
     data = JSON.parse(data);
     let out = '<select size="5">';
     out += '<option data-id="0">Новый товар</option>'
@@ -29,6 +30,7 @@ function selectGoods() {
             "gid" : id
         },
         function (data) {
+            console.log(data);
             data = JSON.parse(data);
             $('#gname').val(data.name);
             $('#gcost').val(data.cost);

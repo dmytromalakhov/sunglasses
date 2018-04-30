@@ -1,11 +1,7 @@
 <?php
-$servername = "mysql.hostinger.co.uk"; //"localhost"
-$username = "u311993610_root"; //"root"
-$password = "Lbvf1993"; //""
-$dbname = "u311993610_sungl"; //"sun-glasses-shop"
-
 function connect() {
-    $conn = new mysqli('localhost', "root", "", "sun-glasses-shop");
+//    $conn = new mysqli("localhost", "k68830jv_sungl", "Lbvf1993", "k68830jv_sungl");
+    $conn = new mysqli("localhost", "root", "", "sun-glasses-shop");
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }

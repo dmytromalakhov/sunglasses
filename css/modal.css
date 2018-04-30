@@ -1,14 +1,31 @@
 .content {
     min-height: 333px;
     height: 100%;
+
+}
+
+.content .modal-header {
+    display: grid;
+    grid-template: 1fr / repeat(5, 1fr);
 }
 
 .content h1 {
+    grid-column: 1 / 5;
     text-align: center;
     margin: 0px 0 20px 0;
     background-color: #212529;
     padding-bottom: 15px;
     color: #fff;
+}
+
+.content .close {
+    background-color: #007bff;
+    opacity: 1;
+    color: #fff;
+    margin-top: 0px;
+    margin-right: 0px;
+    font-size: 31px;
+    grid-column: 5 / 6;
 }
 
 .content .basket h3{

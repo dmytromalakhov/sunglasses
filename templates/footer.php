@@ -4,7 +4,12 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="content">
-                <h1>Корзина</h1>
+                <div class="modal-header">
+                    <h1>Корзина</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
                 <div class="basket"></div>
                 <div class="send-email">
                     <form action="" method="">
